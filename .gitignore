@@ -2,5 +2,8 @@
 /node_modules/**
 /.idea/**
 /public/lib/**
+*.zip
+*.rar
+*.tar*
 errorController.js
 routerController.js

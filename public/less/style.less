@@ -1,28 +1,51 @@
+// Variables
+@black: #333;
+@grey: #7d7e7e;
+@blue: #0097A7;
+@white: #fff;
+@base-color: @black;
+@base-font-family: 'Roboto', sans-serif;
+@base-font-size: 14px;
+@base-font-weight: 300;
+@shadow-blue-big: 0 2px 3px @blue;
+
+// Mixins
+.box-sizing(@type) {
+  -webkit-box-sizing: @type;
+  -moz-box-sizing: @type;
+  box-sizing: @type;
+}
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
 .no-outline {
   outline: none !important;
 }
+
 body {
-  color: #333;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 300;
+  color: @base-color;
+  font-family: @base-font-family;
+  font-size: @base-font-size;
+  font-weight: @base-font-weight;
 }
 a:focus,
 input:focus,
 select:focus,
 button:focus {
-  outline: none !important;
+  .no-outline;
 }
 .heading {
-  color: #0097A7;
+  color: @blue;
   font-size: 27px;
   font-weight: 300;
   margin: 20px 0 40px;
   text-transform: uppercase;
-}
-.heading > .subheading {
-  font-size: 18px;
-  text-transform: initial;
+  & > .subheading {
+    font-size: 18px;
+    text-transform: initial;
+  }
 }
 /* NAVBAR STYLES BEGIN */
 header .navbar-brand {
@@ -30,19 +53,19 @@ header .navbar-brand {
 }
 header .navbar-header .navbar-toggle {
   color: #fff;
-  text-shadow: 0 2px 3px #0097A7;
+  text-shadow: @shadow-blue-big;
 }
 #navigation > ul {
   padding: 15px 0;
+  li {
+    text-transform: uppercase;
+  }
 }
-#navigation > ul li {
-  text-transform: uppercase;
-}
-#navigation > ul > #navigation > ul > li > a,
+#navigation > ul >
+#navigation > ul > li > a,
 #navigation > ul > li > a:visited {
   background: none;
-  color: #7d7e7e;
-  /*efeef9*/
+  color: #7d7e7e; /*efeef9*/
   font-size: 14px;
   font-weight: 400;
   margin: 0 10px;
@@ -70,8 +93,9 @@ header .navbar-header .navbar-toggle {
 #navigation > ul > li > a.get-doctor:active,
 #navigation > ul > li > a.get-doctor:focus,
 #navigation > ul > li > a.get-doctor:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255,255,255,.2);
 }
+
 /*Banner styles*/
 .banner {
   background: url(/img/bg.jpg) center center no-repeat;
@@ -97,7 +121,7 @@ header .navbar-header .navbar-toggle {
 }
 .banner .banner-text a.get-doctor,
 .banner .banner-text a.get-doctor:visited {
-  background: #ffffff;
+  background: rgba(255,255,255,1);
   box-sizing: border-box;
   border: none;
   border-radius: 50px;
@@ -165,7 +189,7 @@ header .navbar-header .navbar-toggle {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
   margin-bottom: 40px;
   min-height: 310px;
   padding: 20px;
@@ -177,7 +201,7 @@ header .navbar-header .navbar-toggle {
   display: inline-block;
   margin-bottom: 20px;
 }
-.service.software-setup .service-icon {
+.service.software-setup  .service-icon{
   background-color: #0078D7;
   padding: 20px 22.5px;
 }
@@ -235,7 +259,7 @@ header .navbar-header .navbar-toggle {
     color: #fff;
   }
   #navigation > ul > li > a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255,255,255,.2);
   }
   #navigation > ul > li > a.get-doctor {
     box-sizing: border-box;
