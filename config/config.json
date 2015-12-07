@@ -1,0 +1,27 @@
+{
+  "port": 12345,
+  "website": "rebootex.com.ua",
+  "websiteCustomData": {
+    "socials": {
+      "vk": "//vk.com/rebootex",
+      "skype": "skype:rebootex.doctor"
+    },
+    "phones": ["+38 068 925 6201", "+38 073 024 8700"],
+    "email": "doctor@rebootex.com.ua",
+    "locales": ["uk", "ru", "en"],
+    "services": {
+
+    }
+  },
+  "i18n": {
+    "cookie": "lang",
+    "defaultLocale": "uk",
+    "directory": "./locales",
+    "fallbacks": {
+      "en-US": "en",
+      "en-GB": "en"
+    },
+    "locales": ["uk", "ru", "en"],
+    "objectNotation": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Rebootex | Try to REBOOT",
+  "call_doctor": "Call a Doctor",
+  "menu": {
+    "services": "Services",
+    "pricing": "Pricing",
+    "about_us": "About us"
+  },
+  "banner": {
+    "title": "Lorem ipsum",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  }
+}

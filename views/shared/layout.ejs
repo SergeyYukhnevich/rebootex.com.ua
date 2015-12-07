@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- BEGIN METADATA -->
+    <meta charset="UTF-8">
+    <title><%= __('title') %></title>
+    <link rel="icon" href="/img/favicon.ico"/>
+    <!-- END METADATA -->
+    <!-- BEGIN GLOBAL STYLES -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=latin,cyrillic">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <!-- END GLOBAL STYLES -->
+    <!-- BEGIN PLUGIN STYLES -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <!-- END PLUGIN STYLES -->
+    <!-- BEGIN APP STYLES -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- END APP STYLES -->
+    <!-- BEGIN PAGE STYLES -->
+    <!-- END PAGE STYLES -->
+</head>
+<body>
+
+    <%- partial('_header') %>
+
+    <%- body %>
+
+    <%- partial('_footer') %>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- BEGIN GLOBAL SCRIPTS -->
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- END GLOBAL SCRIPTS -->
+    <!-- BEGIN PLUGIN SCRIPTS -->
+    <!-- END PLUGIN SCRIPTS -->
+    <!-- BEGIN APP SCRIPTS -->
+    <!-- END APP SCRIPTS -->
+    <!-- BEGIN PAGE SCRIPTS -->
+    <%- scripts %>
+    <!-- END PAGE SCRIPTS -->
+</body>
+</html>

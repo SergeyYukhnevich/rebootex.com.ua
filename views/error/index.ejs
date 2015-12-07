@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><% blocks.title %></title>
+    <link rel="icon" href="/img/favicon.ico"/>
+    <!-- END METADATA -->
+    <!-- BEGIN GLOBAL STYLES -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <!-- END GLOBAL STYLES -->
+    <!-- BEGIN PLUGIN STYLES -->
+    <!-- END PLUGIN STYLES -->
+    <!-- BEGIN APP STYLES -->
+    <!-- END APP STYLES -->
+    <!-- BEGIN PAGE STYLES -->
+    <!-- END PAGE STYLES -->
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="error-block">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center">
+        <div class="copyright">&copy; Rebootex
+            <%
+            var date = new Date();
+            var year = date.getFullYear();
+            %>
+            <%= year %>
+        </div>
+    </footer>
+</body>
+</html>
