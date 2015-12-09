@@ -1,4 +1,6 @@
 {
+  "name": "rebootex.com.ua",
+  "version": "0.0.1",
   "dependencies": {
     "ejs": "^2.3.4",
     "ejs-locals": "^1.0.2",
@@ -7,11 +9,11 @@
     "mongoose": "^4.2.6",
     "nconf": "^0.8.2"
   },
+  "author": "Sergey Yuhnevich <yuhnevic@gmail.com>",
   "main": "app.js",
-  "name": "rebootex.com.ua",
   "repository" : {
     "type" : "git",
     "url" : "https://github.com/SergeyYukhnevich/rebootex.com.ua.git"
   },
-  "version": "0.0.1"
+  "license": "MIT"
 }
