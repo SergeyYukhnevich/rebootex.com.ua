@@ -1,0 +1,34 @@
+// Variables
+@black: #333;
+@grey: #7d7e7e;
+@blue: #0097a7;
+@green: #8cc249;
+@white: #fff;
+@base-color: @black;
+@base-font-family: 'Roboto', sans-serif;
+@base-font-size: 14px;
+@base-font-weight: 300;
+@shadow-blue-big: 0 2px 3px @blue;
+@shadow-blue-small: 1px 1px 1px @blue;
+@shadow-dark-big: 0 2px 3px fade(@black, 30%);
+@shadow-dark-small: 1px 1px 1px fade(@black, 30%);
+
+// Mixins
+.radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+.box-sizing(@type: border-box) {
+  -webkit-box-sizing: @type;
+  -moz-box-sizing: @type;
+  box-sizing: @type;
+}
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+.no-outline {
+  outline: none !important;
+}

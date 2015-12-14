@@ -1,0 +1,72 @@
+<%
+    if (useLayout) {
+        layout('../shared/layout')
+        block('title', __('coming_soon.title'))
+    }
+    stylesheet('/css/coming-soon.css')
+    script('/js/coming-soon.js')
+%>
+
+<section id="coming-soon">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a class="page-logo" href="/">
+                    <img src="/img/logo.png" alt="Reboot Experts" />
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="page-title"><%= __('coming_soon.title') %></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form class="contact-form">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input class="form-control" name="name" placeholder="<%= __('coming_soon.form.name') %>*" type="text">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">+380</span>
+                                    <input class="form-control" name="phone" placeholder="<%= __('coming_soon.form.phone') %>*" type="tel">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input class="form-control" name="email"  placeholder="<%= __('coming_soon.form.email') %>*" type="email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input class="form-control" name="issue"  placeholder="<%= __('coming_soon.form.issue') %>" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <textarea class="form-control" name="message"  placeholder="<%= __('coming_soon.form.message') %>" rows="5"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="btn contact-form-submit" type="button"><%= __('coming_soon.form.submit') %></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

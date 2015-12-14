@@ -1,14 +1,31 @@
 {
-  "title": "Rebootex | Try to REBOOT",
-  "call_doctor": "Call a Doctor",
-  "menu": {
-    "services": "Services",
-    "pricing": "Pricing",
-    "about_us": "About us"
-  },
-  "banner": {
-    "title": "Lorem ipsum",
-    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  }
+	"title": "Rebootex | Try to REBOOT",
+	"call_doctor": "Call a Doctor",
+	"menu": {
+		"services": "Services",
+		"pricing": "Pricing",
+		"about_us": "About us"
+	},
+	"banner": {
+		"title": "Lorem ipsum",
+		"subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+	},
+	"services": {
+		"title": "Services",
+		"subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		"software-setup": {
+			"name": "Software setup",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+		},
+		"hardware-setup": {
+			"name": "PC &amp; Laptops repair center",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+		},
+		"network-setup": {
+			"name": "Network setup",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+		}
+	},
+  "pricing": ["Вызов мастера на дом", "Переустановка Windows", "Удаление вирусов, блокировщиков", "Прошивка BIOS", "Чистка системы охлаждения", "Замена компонентов ноутбуков", "Ремонт блоков питания и з/у ноутбуков", "Прошивка Телефонов и планшетов", "Настройка и прошивка роутеров"]
 }

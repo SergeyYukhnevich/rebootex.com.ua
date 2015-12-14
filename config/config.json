@@ -1,6 +1,7 @@
 {
-  "port": 12345,
+  "port": 3000,
   "website": "rebootex.com.ua",
+  "websiteMaintenance": true,
   "websiteCustomData": {
     "socials": {
       "vk": "//vk.com/rebootex",
@@ -8,20 +9,42 @@
     },
     "phones": ["+38 068 925 6201", "+38 073 024 8700"],
     "email": "doctor@rebootex.com.ua",
-    "locales": ["uk", "ru", "en"],
+    "locales": ["uk", "ru"],
     "services": {
-
-    }
+      "software-setup": {
+        "icon": "fa fa-windows fa-5x"
+      },
+      "hardware-setup": {
+        "icon": "fa fa-medkit fa-5x"
+      },
+      "network-setup": {
+        "icon": "fa fa-wifi fa-5x"
+      }
+    },
+    "pricing": [
+      "<span class=\"amount\">50</span><span class=\"currency-symbol\">&#8372;</span><span class=\"extra\"></span>",
+      "<span class=\"amount\">200</span><span class=\"currency-symbol\">&#8372;</span><span class=\"extra\"></span>",
+      "<span class=\"amount\">50</span><span class=\"currency-symbol\">&#8372;</span><span class=\"extra\"></span>",
+      "<span class=\"amount\">200</span><span class=\"currency-symbol\">&#8372;</span><span class=\"extra\">+</span>",
+      "<span class=\"amount\">200</span><span class=\"currency-symbol\">&#8372;</span><span class=\"extra\"></span>",
+      "<span class=\"amount\">100</span><span class=\"currency-symbol\">&#8372;</span><span class=\"extra\">+</span>",
+      "<span class=\"amount\">150</span><span class=\"currency-symbol\">&#8372;</span><span class=\"extra\"></span>",
+      "<span class=\"amount\">150</span><span class=\"currency-symbol\">&#8372;</span><span class=\"extra\">+</span>",
+      "<span class=\"amount\">100</span><span class=\"currency-symbol\">&#8372;</span><span class=\"extra\"></span>"
+    ]
   },
   "i18n": {
     "cookie": "lang",
     "defaultLocale": "uk",
     "directory": "./locales",
-    "fallbacks": {
-      "en-US": "en",
-      "en-GB": "en"
-    },
-    "locales": ["uk", "ru", "en"],
+    "locales": ["uk", "ru"],
     "objectNotation": true
+  },
+  "nodemailer": {
+    "service": "Gmail",
+    "auth": {
+      "user": "doctor@rebootex.com.ua",
+      "pass": "ui06HB0B"
+    }
   }
 }

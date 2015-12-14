@@ -6,7 +6,8 @@
     "jquery": "~2.1.4",
     "font-awesome": "~4.5.0",
     "jquery-pjax": "~1.9.6",
-    "select2": "~4.0.1"
+    "select2": "~4.0.1",
+    "blockUI": "https://github.com/malsup/blockui.git"
   },
   "devDependencies": {}
 }

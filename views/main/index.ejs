@@ -1,6 +1,9 @@
-<% layout('../shared/layout') -%>
-<% script('/js/script.js') %>
-
+<%
+    if (useLayout) {
+        layout('../shared/layout')
+        block('title', __('title'))
+    }
+%>
 <section class="banner">
     <header>
         <nav class="navbar">
@@ -44,22 +47,22 @@
 <section class="quick-contacts">
     <div class="container">
         <ul class="list-inline">
-            <% for(social in socials) { %>
-                <li class="social hidden-xs <%= social %>">
-                    <a href="<%= socials[social] %>" target="_blank"><i class="fa fa-<%= social %>"></i></a>
-                </li>
-            <% } %>
-            <% phones.forEach(function(phone) { %>
+            <% data.phones.forEach(function(phone) { %>
                 <li class="hidden-xs">
                     <a href="tel:<%= phone.replace(/[\s\+]/g, '') %>"><i class="fa fa-phone"></i> <%= phone %></a>
                 </li>
             <% }); %>
             <li class="hidden-xs">
-                <a href="mailto:<%= email %>"><i class="fa fa-envelope-o"></i> <%= email %></a>
+                <a href="mailto:<%= data.email %>"><i class="fa fa-envelope-o"></i> <%= data.email %></a>
             </li>
-            <% locales.forEach(function(locale) { %>
+            <% for(social in data.socials) { %>
+                <li class="social hidden-xs <%= social %>">
+                    <a href="<%= data.socials[social] %>" target="_blank"><i class="fa fa-<%= social %>"></i></a>
+                </li>
+            <% } %>
+            <% data.locales.forEach(function(locale) { %>
                 <li class="language">
-                    <a href="/<%= locale %>"><img src="/img/<%= locale %>.png" alt="<%= locale %>"></a>
+                    <a href="javascript:;" class="change-locale" data-locale="<%= locale %>"><img src="/img/<%= locale %>.png" alt="<%= locale %>"></a>
                 </li>
             <% }); %>
         </ul>
@@ -69,36 +72,37 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="heading">Услуги <span class="subheading">перечень оказываемых ремонтных работ и обслуживаемой техники</span></h2>
+                <h2 class="heading"><%= __('services.title') %> <span class="subheading"><%= __('services.subtitle') %></span></h2>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="service software-setup">
-                    <div class="service-icon"><i class="fa fa-windows fa-5x"></i></div>
-                    <div class="service-name">Настройка программного обеспечения</div>
-                    <div class="service-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <% for (service in data.services) { %>
+                <div class="col-md-4">
+                    <div class="service <%= service %>">
+                        <div class="service-icon"><i class="<%= data.services[service].icon %>"></i></div>
+                        <div class="service-name"><%= __('services.' + service + '.name') %></div>
+                        <div class="service-description"><%= __('services.' + service + '.description') %></div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service hardware-setup">
-                    <div class="service-icon"><i class="fa fa-medkit fa-5x"></i></div>
-                    <div class="service-name">Ремент компьютеров и ноутбуков</div>
-                    <div class="service-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service network-setup">
-                    <div class="service-icon"><i class="fa fa-wifi fa-5x"></i></div>
-                    <div class="service-name">Настройка сетевого оборудования</div>
-                    <div class="service-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </div>
-                </div>
+            <% } %>
+        </div>
+    </div>
+</section>
+<section id="pricing">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12">
+                <ul class="pricing-list">
+                    <% for ( var i = 0; i < data.pricing.length; i++) { %>
+                        <li>
+                            <div class="price"><%- data.pricing[i] %></div>
+                            <div class="info">
+                                <span class="name"><%= __('pricing.' + i) %></span>
+                            </div>
+                            <a href="#get-doctor" data-type="<%= __('pricing.' + i) %>"><%= __('call_doctor') %></a>
+                        </li>
+                    <% } %>
+                </ul>
             </div>
         </div>
     </div>

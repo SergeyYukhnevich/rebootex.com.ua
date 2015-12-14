@@ -1,0 +1,87 @@
+.no-outline {
+  outline: none !important;
+}
+/* BEGIN COMING SOON STYLES */
+#wrapper {
+  background: url(/img/bg.jpg) center center no-repeat;
+  background-size: cover;
+}
+#coming-soon .page-logo {
+  display: inline-block;
+  margin: 30px 0;
+}
+#coming-soon .page-title {
+  color: #fff;
+  font-size: 56px;
+  font-weight: 500;
+  margin: 0 0 30px;
+  text-shadow: 0 2px 3px #0097a7;
+}
+#coming-soon .contact-form {
+  margin: 10px auto 30px;
+  max-width: 500px;
+}
+#coming-soon .contact-form input,
+#coming-soon .contact-form textarea {
+  border-color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 1px rgba(51, 51, 51, 0.3);
+  -moz-box-shadow: 1px 1px 1px rgba(51, 51, 51, 0.3);
+  box-shadow: 1px 1px 1px rgba(51, 51, 51, 0.3);
+  color: #333;
+}
+#coming-soon .contact-form input :focus,
+#coming-soon .contact-form textarea :focus {
+  border-color: #0097a7;
+}
+#coming-soon .contact-form input {
+  height: 40px;
+}
+#coming-soon .contact-form .input-group {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 1px rgba(51, 51, 51, 0.3);
+  -moz-box-shadow: 1px 1px 1px rgba(51, 51, 51, 0.3);
+  box-shadow: 1px 1px 1px rgba(51, 51, 51, 0.3);
+}
+#coming-soon .contact-form .input-group .input-group-addon {
+  background: #0097a7;
+  border: none;
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+}
+#coming-soon .contact-form .input-group input {
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+}
+#coming-soon .contact-form textarea {
+  resize: none;
+}
+#coming-soon .contact-form .contact-form-submit {
+  background: #8cc249;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 1px rgba(51, 51, 51, 0.3);
+  -moz-box-shadow: 1px 1px 1px rgba(51, 51, 51, 0.3);
+  box-shadow: 1px 1px 1px rgba(51, 51, 51, 0.3);
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  height: 50px;
+  text-transform: uppercase;
+  width: 100%;
+}
+footer {
+  text-align: center;
+}
+/* END COMING SOON STYLES */

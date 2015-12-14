@@ -1,14 +1,42 @@
 {
-  "title": "Rebootex | Попробуйте перезагрузить",
-  "call_doctor": "Вызвать Доктора",
-  "menu": {
-    "services": "Услуги",
-    "pricing": "Цены",
-    "about_us": "О нас"
-  },
-  "banner": {
-    "title": "Сервисный центр",
-    "subtitle": "по ремонту компьютерной техники",
-    "description": "Мы максимально быстро и качественно отремонтируем вашу технику, независимо от ее типа и характера неисправности"
-  }
+	"title": "Попробуйте перезагрузить",
+	"call_doctor": "Вызвать Доктора",
+	"menu": {
+		"services": "Услуги",
+		"pricing": "Цены",
+		"about_us": "О нас"
+	},
+	"banner": {
+		"title": "Сервисный центр",
+		"subtitle": "по ремонту компьютерной техники",
+		"description": "Мы максимально быстро и качественно отремонтируем вашу технику, независимо от ее типа и характера неисправности"
+	},
+	"services": {
+		"title": "Услуги",
+		"subtitle": "перечень оказываемых ремонтных работ и обслуживаемой техники",
+		"software-setup": {
+			"name": "Настройка программного обеспечения",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+		},
+		"hardware-setup": {
+			"name": "Ремонт компьютеров и ноутбуков",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+		},
+		"network-setup": {
+			"name": "Настройка сетевого оборудования",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+		}
+	},
+	"pricing": ["Вызов мастера на дом", "Переустановка Windows", "Удаление вирусов, блокировщиков", "Прошивка BIOS", "Чистка системы охлаждения", "Замена компонентов ноутбуков", "Ремонт блоков питания и з/у ноутбуков", "Прошивка Телефонов и планшетов", "Настройка и прошивка роутеров"],
+	"coming_soon": {
+		"title": "Сайт в разработке",
+		"form": {
+			"name": "Имя",
+            "phone": "Номер телефона",
+			"email": "Адрес электронной почты",
+			"issue": "Проблема",
+			"message": "Сообщение",
+			"submit": "Отправить"
+		}
+	}
 }

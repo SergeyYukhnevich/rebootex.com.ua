@@ -1,14 +1,52 @@
 {
-  "title": "Rebootex | Спробуйте перезавантажити",
-  "call_doctor": "Викликати Доктора",
-  "menu": {
-    "services": "Послуги",
-    "pricing": "Ціни",
-    "about_us": "Про нас"
-  },
-  "banner": {
-    "title": "Сервісний центр",
-    "subtitle": "з ремонту комп'ютерної техніки",
-    "description": "Мы максимально швидко та якісно відремонтуемо вашу техніку, незважаючі на тип і характер несправності"
-  }
+	"title": "Спробуйте перезавантажити",
+	"call_doctor": "Викликати Доктора",
+	"menu": {
+		"services": "Послуги",
+		"pricing": "Ціни",
+		"about_us": "Про нас"
+	},
+	"banner": {
+		"title": "Налаштування та ремонт комп'ютерноЇ техніки",
+		"subtitle": "з ремонту комп'ютерної техніки",
+		"description": "Мы максимально швидко та якісно відремонтуемо вашу техніку, незважаючі на тип і характер несправності"
+	},
+	"services": {
+		"title": "Послуги",
+		"subtitle": "перелік надаваємих ремонтных робіт та обслуговуваної техніки",
+		"software-setup": {
+			"name": "Налаштування програмного забеспечення",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+		},
+		"hardware-setup": {
+			"name": "Ремонт комп'ютерів та ноутбуків",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+		},
+		"network-setup": {
+			"name": "Налаштування мережевого обладнання",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+		}
+	},
+	"pricing": [
+		"Виклик майстра додому",
+		"Інсталяція Windows",
+		"Видалення вірусів, блокувальників",
+		"Прошивка BIOS",
+		"Чистка системи охолодження ноутбука та комп'ютера",
+		"Заміна комплектуючих ноутбука",
+		"Ремонт зарядного пристрою ноутбука",
+		"Прошивка телефонів та планшетів",
+		"Налаштування та прошивка роутерів"
+	],
+	"coming_soon": {
+		"title": "Сайт в розробці",
+		"form": {
+			"name": "Ім'я",
+			"phone": "Номер телефону",
+			"email": "Адреса електронної пошти",
+			"issue": "Проблема",
+			"message": "Повідомлення",
+			"submit": "Відправити"
+		}
+	}
 }
