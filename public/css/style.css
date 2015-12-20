@@ -9,6 +9,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 300;
+  min-width: 310px !important;
 }
 html,
 body {
@@ -400,7 +401,22 @@ footer {
   height: 40px;
   line-height: 40px;
   text-align: left;
-  padding-left: 15px;
+}
+footer ul.social-links {
+  list-style: none;
+  margin-bottom: 0;
+  padding-right: 0;
+}
+footer ul.social-links li {
+  display: inline-block;
+  font-size: 21px;
+  line-height: 24px;
+  padding: 0 10px;
+  vertical-align: middle;
+}
+footer ul.social-links li a {
+  color: #fff;
+  text-decoration: none;
 }
 /* END STICKY FOOTER STYLES*/
 /* BEGIN MEDIA STYLES */
