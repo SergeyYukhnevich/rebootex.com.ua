@@ -1,5 +1,6 @@
 var http = require('http');
-var config = require('./config');
+var log = require('./log')(module);
+var config = require('../config/index');
 
 module.exports = function (app) {
     "use strict";
@@ -31,11 +32,11 @@ module.exports = function (app) {
 
         switch (error.code) {
             case 'EACCES':
-                console.error(bind + ' requires elevated privileges');
+                log.error(bind + ' requires elevated privileges');
                 process.exit(1);
                 break;
             case 'EADDRINUSE':
-                console.error(bind + ' is already in use');
+                log.error(bind + ' is already in use');
                 process.exit(1);
                 break;
             default:
@@ -47,6 +48,6 @@ module.exports = function (app) {
         var bind = typeof addr === 'string'
             ? 'pipe ' + addr
             : 'port ' + addr.port;
-        console.info('Listening on ' + bind);
+        log.info('Listening on ' + bind);
     }
 };

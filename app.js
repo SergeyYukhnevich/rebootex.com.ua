@@ -1,12 +1,14 @@
 var express = require('express');
-var server = require('./server');
+var server = require('./libs/server');
 var config = require('./config/index');
+var log = require('./libs/log')(module);
 var i18n = require('i18n');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
-var nodemailer = require('nodemailer');
+var sendMail = require('./controllers/sendMailController');
 var favicon = require('serve-favicon');
-
+var errorHandler = require('errorhandler');
+var HttpError = require('./controllers/errorController').HttpError;
 var app = express();
 
 app.engine('ejs', require('ejs-locals'));
@@ -20,10 +22,14 @@ app.use(favicon(__dirname + '/public/img/favicon.ico'));
 app.use(cookieParser());
 app.use(i18n.init);
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(require('./controllers/errorController').sendHttpError);
+app.use(require('./controllers/errorController').sendValidationError);
+
+app.use('/', sendMail);
 
 app.get('/', function (req, res, next) {
     if (config.get('websiteMaintenance')) {
-        res.render('coming-soon', { useLayout: true });
+        res.render('coming-soon', { useLayout: true, data: config.get('websiteCustomData') });
     } else {
         res.cookie('lang', req.getLocale(), { maxAge: 30*24*60*60*1000, httpOnly: true });
         res.render('main', { useLayout: true, data: config.get('websiteCustomData') });
@@ -41,57 +47,30 @@ app.get('/set', function (req, res, next) {
         });
     }
 });
-app.post('/send', function (req, res, next) {
-    nodemailer.createTransport().sendMail({
-        from: 'Rebootex Coming Soon Page <website@rebootex.com.ua>',
-        to: 'doctor@rebootex.com.ua',
-        subject: 'Новое сообщение с сайта!!!',
-        html:
-            '<b>Name: </b>' + req.body.name + '<br>' +
-            '<b>Phone: </b> +380' + req.body.phone + '<br>' +
-            '<b>Email: </b>' + req.body.email + '<br>' +
-            '<b>Issue: </b>' + req.body.issue + '<br>' +
-            '<b>Message: </b>' + req.body.message + '<br>'
-    }, function(err, data){
-        if(err){
-            return res.send(err);
-        }
-        res.send(data);
-    });
-});
 
 // Error handlers
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
+    next(404);
 });
 
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-    app.use(function(err, req, res, next) {
-        res.status(err.status || 500);
-        res.render('error', {
-            status: err.status || 500,
-            message: err.message,
-            error: err
-        });
-        console.error(err);
-    });
-}
-
-// production error handler
-// no stacktraces leaked to user
 app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-        status: err.status || 500,
-        message: err.message,
-        error: {}
-    });
+    if (typeof err == 'number') {
+        err = new HttpError(err);
+    }
+
+    if (err instanceof HttpError) {
+        res.sendHttpError(err);
+    } else {
+        if (app.get('env') == 'development') {
+            app.use(errorHandler())(err, req, res, next);
+        } else {
+            log.error(err);
+            err = new HttpError(500);
+            res.sendHttpError(err);
+        }
+    }
 });
 
 server(app);

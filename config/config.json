@@ -46,5 +46,20 @@
       "user": "doctor@rebootex.com.ua",
       "pass": "ui06HB0B"
     }
+  },
+  "mongoose": {
+    "dev": {
+      "uri": "mongodb://localhost:27017/rebootex"
+    },
+    "prod": {
+      "uri": "mongodb://sergey:g08eE9OV@ds061454.mongolab.com:61454/rebootex"
+    },
+    "options": {
+      "server": {
+        "socketOptions": {
+          "keepAlive": 1
+        }
+      }
+    }
   }
 }
