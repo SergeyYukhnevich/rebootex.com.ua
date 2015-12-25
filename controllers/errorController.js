@@ -24,9 +24,8 @@ exports.sendHttpError = function(req, res, next) {
         if (res.req.headers['x-requested-with'] == 'XMLHttpRequest') {
             res.json(error);
         } else {
-            res.render('error', {error: error, pageName: 'Error', title: error.message});
+            res.render('error', { data: error });
         }
-
     };
 
     next();

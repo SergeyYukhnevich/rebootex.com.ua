@@ -19,17 +19,6 @@ select:focus,
 button:focus {
   .no-outline;
 }
-.heading {
-  color: @blue;
-  font-size: 27px;
-  font-weight: 300;
-  margin: 20px 0 40px;
-  text-transform: uppercase;
-  & > .subheading {
-    font-size: 18px;
-    text-transform: initial;
-  }
-}
 
 /* BEGIN PAGE LOADING ANIMATION STYLES  */
 .page-spinner-bar {
@@ -247,51 +236,54 @@ header .navbar-header .navbar-toggle {
 /* END QUICK CONTACTS STYLES */
 
 /* BEGIN SERVICES STYLES */
-.service {
-  background-color: fade(@blue, 10%);
-  .radius(2px);
-  .box-shadow(@shadow-dark-big);
-  margin-bottom: 40px;
-  min-height: 310px;
-  padding: 20px;
-  text-align: center;
-  .service-icon {
-    .radius(50%);
-    color: @white;
-    display: inline-block;
-    margin-bottom: 20px;
-  }
-  .service-name {
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-  }
-  &.software-setup {
+#services {
+  .heading(@blue);
+  .service {
+    background-color: fade(@blue, 10%);
+    .radius(2px);
+    .box-shadow(@shadow-dark-big);
+    margin-bottom: 40px;
+    min-height: 310px;
+    padding: 20px;
+    text-align: center;
     .service-icon {
-      background-color: #0078D7;
-      padding: 20px 22.5px;
+      .radius(50%);
+      color: @white;
+      display: inline-block;
+      margin-bottom: 20px;
     }
     .service-name {
-      color: #0078D7;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 10px;
+      text-transform: uppercase;
     }
-  }
-  &.hardware-setup {
-    .service-icon {
-      background-color: #A61C2A;
-      padding: 20px;
+    &.software-setup {
+      .service-icon {
+        background-color: #0078D7;
+        padding: 20px 22.5px;
+      }
+      .service-name {
+        color: #0078D7;
+      }
     }
-    .service-name {
-      color: #A61C2A;
+    &.hardware-setup {
+      .service-icon {
+        background-color: #A61C2A;
+        padding: 20px;
+      }
+      .service-name {
+        color: #A61C2A;
+      }
     }
-  }
-  &.network-setup {
-    .service-icon {
-      background-color: #8CC249;
-      padding: 23px 15px 17px;
-    }
-    .service-name {
-      color: #8CC249;
+    &.network-setup {
+      .service-icon {
+        background-color: #8CC249;
+        padding: 23px 15px 17px;
+      }
+      .service-name {
+        color: #8CC249;
+      }
     }
   }
 }
@@ -301,6 +293,7 @@ header .navbar-header .navbar-toggle {
 #pricing {
   background: darken(@blue, 15%);
   padding: 50px 0;
+  .heading(@white);
   .pricing-list {
     list-style: none;
     margin-bottom: 0;
@@ -366,6 +359,69 @@ header .navbar-header .navbar-toggle {
   }
 }
 /* END PRICING STYLES */
+
+/* BEGIN ABOUT US STYLES */
+#about-us {
+  padding: 50px 0;
+  .heading(@blue);
+  .content {
+    font-size: 16px;
+  }
+}
+/* END ABOUT US STYLES */
+
+/* BEGIN GET DOCTOR STYLES */
+#get-doctor {
+  background: darken(@blue, 15%);
+  padding: 50px 0;
+  .heading(@white);
+}
+/* END GET DOCTOR STYLES */
+
+/* BEGIN CONTACT FORM STYLES */
+.contact-form {
+  input, textarea {
+    border-color: @white;
+    .radius(5px);
+    .box-shadow(@shadow-dark-small);
+    color: @black;
+    :focus {
+      border-color: @blue;
+    }
+  }
+  input {
+    height: 40px;
+  }
+  .input-group {
+    .radius(5px);
+    .box-shadow(@shadow-dark-small);
+    .input-group-addon {
+      background: @blue;
+      border: none;
+      .radius(5px 0 0 5px);
+      .box-shadow(none);
+      color: @white;
+    }
+    input {
+      .radius(0 5px 5px 0);
+    }
+  }
+  textarea {
+    resize: none;
+  }
+  .contact-form-submit {
+    background: @green;
+    .radius(5px);
+    .box-shadow(@shadow-dark-small);
+    color: @white;
+    display: block;
+    font-size: 16px;
+    height: 50px;
+    text-transform: uppercase;
+    width: 100%;
+  }
+}
+/* END CONTACT FORM STYLES */
 
 /* BEGIN STICKY FOOTER STYLES*/
 @footer-height: 40px;

@@ -17,15 +17,47 @@ var Rebootex = function () {
         });
 
     };
+    var handleGetDoctorButtonClick = function () {
+        var issueField = $('#get-doctor .contact-form .form-control[name="issue"]');
+        $('#pricing .pricing-list > li > a').on('click', function () {
+            var issue = $(this).data('issue');
+            issueField.val(issue);
+        });
+    };
+    var handleContactForm = function () {
+
+        $('.contact-form-submit').on('click', function () {
+            var form = $('.contact-form');
+            var data = {};
+            form.find('input, textarea').each(function () {
+                data[this.name] = this.value;
+            });
+            $.post('/sendMail', data,  function (data) {
+                if (data.type == 'error') {
+                    toastr.warning(data.data.message, data.data.title);
+                } else if (data.type == 'success') {
+                    form.find('input, textarea').each(function () {
+                        $(this).val('');
+                    });
+                    toastr.success(data.data.message, data.data.title);
+                }
+            }).error(function (data) {
+                console.log(data);
+            });
+        });
+
+    };
 
     return {
         init: function () {
             handleLanguageChange();
-            Rebootex.initToastr();
+            handleGetDoctorButtonClick();
+            handleContactForm();
         },
         initAjax: function () {
             handleLanguageChange();
-            Rebootex.initToastr();
+            handleGetDoctorButtonClick();
+            handleContactForm();
         },
         blockUI: function() {
             $.blockUI({
@@ -70,4 +102,5 @@ var Rebootex = function () {
 
 jQuery(document).ready(function () {
     Rebootex.init();
+    Rebootex.initToastr();
 });

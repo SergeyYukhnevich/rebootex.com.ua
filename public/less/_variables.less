@@ -29,6 +29,19 @@
   -moz-box-shadow: @shadow;
   box-shadow: @shadow;
 }
-.no-outline {
+.no-outline() {
   outline: none !important;
+}
+.heading(@color) {
+  .heading {
+    color: @color;
+    font-size: 27px;
+    font-weight: 300;
+    margin: 20px 0 40px;
+    text-transform: uppercase;
+    & > .sub-heading {
+      font-size: 18px;
+      text-transform: initial;
+    }
+  }
 }

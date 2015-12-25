@@ -1,7 +1,7 @@
 {
   "port": 3000,
   "website": "rebootex.com.ua",
-  "websiteMaintenance": true,
+  "websiteMaintenance": false,
   "websiteCustomData": {
     "socials": {
       "vk": "//vk.com/rebootex",

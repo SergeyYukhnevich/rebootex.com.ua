@@ -4,7 +4,6 @@
         block('title', __('coming_soon.title'))
     }
     stylesheet('/css/coming-soon.css')
-    script('/js/coming-soon.js')
 %>
 
 <section id="coming-soon">
@@ -27,14 +26,14 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <input class="form-control" name="name" placeholder="<%= __('coming_soon.form.name') %>*" type="text">
+                                <input class="form-control" name="name" placeholder="<%= __('contact_form.name') %>*" type="text">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <div class="input-group">
-                                    <span class="input-group-addon">+380</span>
-                                    <input class="form-control" name="phone" placeholder="<%= __('coming_soon.form.phone') %>*" type="tel">
+                                    <span class="input-group-addon">+38</span>
+                                    <input class="form-control" name="phone" placeholder="<%= __('contact_form.phone') %>*" type="tel">
                                 </div>
                             </div>
                         </div>
@@ -42,27 +41,27 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input class="form-control" name="email"  placeholder="<%= __('coming_soon.form.email') %>*" type="email">
+                                <input class="form-control" name="email"  placeholder="<%= __('contact_form.email') %>*" type="email">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input class="form-control" name="issue"  placeholder="<%= __('coming_soon.form.issue') %>" type="text">
+                                <input class="form-control" name="issue"  placeholder="<%= __('contact_form.issue') %>" type="text">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <textarea class="form-control" name="message"  placeholder="<%= __('coming_soon.form.message') %>" rows="5"></textarea>
+                                <textarea class="form-control" name="message"  placeholder="<%= __('contact_form.message') %>" rows="5"></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <button class="btn contact-form-submit" type="button"><%= __('coming_soon.form.submit') %></button>
+                            <button class="btn contact-form-submit" type="button"><%= __('contact_form.submit') %></button>
                         </div>
                     </div>
                 </form>

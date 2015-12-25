@@ -72,7 +72,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="heading"><%= __('services.title') %> <span class="subheading"><%= __('services.subtitle') %></span></h2>
+                <h2 class="heading"><%= __('services.title') %> <span class="sub-heading"><%= __('services.subtitle') %></span></h2>
             </div>
         </div>
         <div class="row">
@@ -92,17 +92,92 @@
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12">
+                <h2 class="heading"><%= __('pricing.title') %> <span class="sub-heading"><%= __('pricing.subtitle') %></span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12">
                 <ul class="pricing-list">
                     <% for ( var i = 0; i < data.pricing.length; i++) { %>
                         <li>
                             <div class="price"><%- data.pricing[i] %></div>
                             <div class="info">
-                                <span class="name"><%= __('pricing.' + i) %></span>
+                                <span class="name"><%= __('pricing.services.' + i) %></span>
                             </div>
-                            <a href="#get-doctor" data-type="<%= __('pricing.' + i) %>"><%= __('call_doctor') %></a>
+                            <a href="#get-doctor" data-issue="<%= __('pricing.services.' + i) %>"><%= __('call_doctor') %></a>
                         </li>
                     <% } %>
                 </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="heading"><%= __('about_us.title') %> <span class="sub-heading"><%= __('about_us.subtitle') %></span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="content"><%- __('about_us.content') %></p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="get-doctor">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12">
+                <h2 class="heading"><%= __('get_doctor.title') %> <span class="sub-heading"><%= __('get_doctor.subtitle') %></span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12">
+                <form class="contact-form">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input class="form-control" name="name" placeholder="<%= __('contact_form.name') %>*" type="text">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">+38</span>
+                                    <input class="form-control" name="phone" placeholder="<%= __('contact_form.phone') %>*" type="tel">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input class="form-control" name="email"  placeholder="<%= __('contact_form.email') %>*" type="email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input class="form-control" name="issue"  placeholder="<%= __('contact_form.issue') %>" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <textarea class="form-control" name="message"  placeholder="<%= __('contact_form.message') %>" rows="5"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="btn contact-form-submit" type="button"><%= __('contact_form.submit') %></button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

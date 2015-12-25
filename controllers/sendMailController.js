@@ -31,7 +31,7 @@ router.post('/sendMail', function (req, res, next) {
                             subject: 'Новое сообщение с сайта!',
                             html:
                             '<b>Имя: </b>' + req.body.name + '<br>' +
-                            '<b>Номер телефона: </b> +380' + req.body.phone + '<br>' +
+                            '<b>Номер телефона: </b> +38' + req.body.phone + '<br>' +
                             '<b>Адрес электронной почты: </b>' + req.body.email + '<br>' +
                             '<b>Проблема: </b>' + req.body.issue + '<br>' +
                             '<b>Сообщение: </b>' + req.body.message + '<br>'
@@ -54,19 +54,19 @@ router.post('/sendMail', function (req, res, next) {
             } else {
                 res.sendValidationError({
                     title: res.__('notifications.error.title'),
-                    message: res.__('notifications.error.invalidEmail')
+                    message: res.__('notifications.error.invalid_email')
                 });
             }
         } else {
             res.sendValidationError({
                 title: res.__('notifications.error.title'),
-                message: res.__('notifications.error.invalidPhone')
+                message: res.__('notifications.error.invalid_phone')
             });
         }
     } else {
         res.sendValidationError({
             title: res.__('notifications.error.title'),
-            message: res.__('notifications.error.emptyFields')
+            message: res.__('notifications.error.empty_fields')
         });
     }
 
