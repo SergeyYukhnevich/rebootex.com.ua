@@ -47,6 +47,8 @@ app.get('/set', function (req, res, next) {
         });
     }
 });
+
+// Used for Letsencrypt ssl verification
 app.get('/.well-known/acme-challenge/kUcR7LpWXD2-ZIBbjviGrv7DIrDGvS1xFXUMQCno7pY', function (req, res, next) {
     res.send('kUcR7LpWXD2-ZIBbjviGrv7DIrDGvS1xFXUMQCno7pY.sOsj0DY_jukL8xBTVw35C632-WdM7gc52QdVCsuGpGg');
 });
