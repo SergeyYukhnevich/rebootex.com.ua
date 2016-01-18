@@ -26,7 +26,7 @@ router.post('/sendMail', function (req, res, next) {
                         next(err);
                     } else {
                         transporter.sendMail({
-                            from: 'Сообщение со страницы \"Сайт в разработке\" <website@rebootex.com.ua>',
+                            from: 'website@rebootex.com.ua',
                             to: 'doctor@rebootex.com.ua',
                             subject: 'Новое сообщение с сайта!',
                             html:
