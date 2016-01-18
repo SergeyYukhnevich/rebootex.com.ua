@@ -47,8 +47,8 @@ app.get('/set', function (req, res, next) {
         });
     }
 });
-app.get('/.well-known/acme-challenge/kany3MSdc8rRdNrIOxrZDc9CsmCSkd9YziI2tAEaslk', function (req, res, next) {
-    res.send('kany3MSdc8rRdNrIOxrZDc9CsmCSkd9YziI2tAEaslk.sOsj0DY_jukL8xBTVw35C632-WdM7gc52QdVCsuGpGg');
+app.get('/.well-known/acme-challenge/kUcR7LpWXD2-ZIBbjviGrv7DIrDGvS1xFXUMQCno7pY', function (req, res, next) {
+    res.send('kUcR7LpWXD2-ZIBbjviGrv7DIrDGvS1xFXUMQCno7pY.sOsj0DY_jukL8xBTVw35C632-WdM7gc52QdVCsuGpGg');
 });
 
 // Error handlers
