@@ -47,17 +47,29 @@ var Rebootex = function () {
         });
 
     };
+    var handleSmoothScroll = function () {
+        $('.smooth-scroll').on('click', function () {
+            var target = $(this).attr('href');
+            console.log(target);
+            $('html, body').animate({
+                scrollTop: $(target).offset().top
+            }, 1000);
+            return false;
+        });
+    };
 
     return {
         init: function () {
             handleLanguageChange();
             handleGetDoctorButtonClick();
             handleContactForm();
+            handleSmoothScroll();
         },
         initAjax: function () {
             handleLanguageChange();
             handleGetDoctorButtonClick();
             handleContactForm();
+            handleSmoothScroll();
         },
         blockUI: function() {
             $.blockUI({

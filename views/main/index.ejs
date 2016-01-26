@@ -19,11 +19,11 @@
                 </div>
                 <div id="navigation" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#services"><%= __('menu.services') %></a></li>
-                        <li><a href="#pricing"><%= __('menu.pricing') %></a></li>
+                        <li><a href="#services" class="smooth-scroll"><%= __('menu.services') %></a></li>
+                        <li><a href="#pricing" class="smooth-scroll"><%= __('menu.pricing') %></a></li>
                         <!--<li><a href="#cooperation">Сотрудничество</a></li>-->
-                        <li><a href="#about"><%= __('menu.about_us') %></a></li>
-                        <li><a class="btn get-doctor" href="#get-doctor"><%= __('call_doctor') %></a></li>
+                        <li><a href="#about-us" class="smooth-scroll"><%= __('menu.about_us') %></a></li>
+                        <li><a class="btn get-doctor smooth-scroll" href="#get-doctor"><%= __('call_doctor') %></a></li>
                         <!--<li><a href="/login">Войти</a></li>-->
                         <!--<li><a href="/sign-up">Зарегистрироваться</a></li>-->
                     </ul>
@@ -72,7 +72,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="heading"><%= __('services.title') %> <span class="sub-heading"><%= __('services.subtitle') %></span></h2>
+                <h2 class="heading"><%= __('services.title') %></h2>
             </div>
         </div>
         <div class="row">
@@ -104,7 +104,7 @@
                             <div class="info">
                                 <span class="name"><%= __('pricing.services.' + i) %></span>
                             </div>
-                            <a href="#get-doctor" data-issue="<%= __('pricing.services.' + i) %>"><%= __('call_doctor') %></a>
+                            <a href="#get-doctor" class="smooth-scroll" data-issue="<%= __('pricing.services.' + i) %>"><%= __('call_doctor') %></a>
                         </li>
                     <% } %>
                 </ul>
