@@ -41,11 +41,7 @@
     "objectNotation": true
   },
   "nodemailer": {
-    "service": "Gmail",
-    "auth": {
-      "user": "doctor@rebootex.com.ua",
-      "pass": "ui06HB0B"
-    }
+    "service": "Gmail"
   },
   "mongoose": {
     "dev": {
