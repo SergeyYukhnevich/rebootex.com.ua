@@ -18,7 +18,7 @@ app.set('views', __dirname + '/views');
 i18n.configure(config.get('i18n'));
 
 app.use(express.static(__dirname + '/public'));
-app.use(favicon(__dirname + '/public/img/favicon.ico'));
+//app.use(favicon(__dirname + '/public/img/favicon.ico'));
 app.use(cookieParser());
 app.use(i18n.init);
 app.use(bodyParser.urlencoded({ extended: false }));
